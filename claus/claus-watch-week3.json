@@ -1,0 +1,276 @@
+{
+  "title": "CLAUS watch, week 3",
+  "task": "b293a3b1-24e0-4ca3-a213-5abd5c9c25c9",
+  "deal": "0x5b9b7bf9ff0e856efd2897344afb8fc501449ded5222dcf77958a0171a9ad883",
+  "by": "Blockpin (@holdembuilds)",
+  "status": "final",
+  "disclosure": "Since 7 Nov 2026 Josh (@holdembuilds), who runs Blockpin, holds an advisor role with Claus and receives a 0.1% ETH share of Robinhood CLAUS pool volume, paid by the Robinhood fee hook to 0x1C31B012a8565567A72F7c661D7f0d9f92182853. This record covers the Ethereum contracts only and is published whichever way it reads.",
+  "window": {
+    "fromBlock": 26332438,
+    "fromTime": "2026-11-03 06:20:11 UTC",
+    "toBlock": 26383172,
+    "toTime": "2026-11-10 07:59:59 UTC",
+    "due": "last block before 2026-11-10 08:00 UTC"
+  },
+  "watched": {
+    "token": "0x1b54E762aa34CF6E28E9C082F2848e28E45DA6b8",
+    "controller": "0x180eae784dee739fbab432b06f78bf9a98aae334",
+    "operator": "0xab716305e5a8854c0dd08397087dbdd56ea32073",
+    "host": "0xea0436465676eA7001535Bfe2E5cbd4b137b7f91"
+  },
+  "startState": {
+    "tokenOwner": "0x180eae784dee739fbab432b06f78bf9a98aae334",
+    "controllerOperator": "0xab716305e5a8854c0dd08397087dbdd56ea32073",
+    "hostActiveModule": "0x71a8f53e9f4a67aa6acbb9d722b4ac9f36ffd069",
+    "source": "week-2 record end state (block 26,332,437)"
+  },
+  "endState": {
+    "block": 26383172,
+    "time": "2026-11-10 07:59:59 UTC",
+    "tokenOwner": "0xbb145ca83272c3806d4ddc75ca1d5514789cf1c5",
+    "tokenPendingOwner": "0x0000000000000000000000000000000000000000",
+    "controllerOperator": "0xab716305e5a8854c0dd08397087dbdd56ea32073",
+    "hostActiveModule": "0x19de13a398a4e527e81d220ed48538a8de69fdbe",
+    "source": "eth_call at the end block"
+  },
+  "ownerChanges": [
+    {
+      "block": 26352210,
+      "time": "2026-11-06 00:26:23 UTC",
+      "event": "OwnershipTransferStarted",
+      "from": "0x180eae784dee739fbab432b06f78bf9a98aae334",
+      "to": "0xbb145ca83272c3806d4ddc75ca1d5514789cf1c5",
+      "tx": "0x266cf9528d4c117196d2dfec2c5293c4f82cde858fb8680de3f71d8245b9353a",
+      "sentBy": "0xbb145ca83272c3806d4ddc75ca1d5514789cf1c5"
+    },
+    {
+      "block": 26352212,
+      "time": "2026-11-06 00:26 UTC",
+      "event": "OwnershipTransferred",
+      "from": "0x180eae784dee739fbab432b06f78bf9a98aae334",
+      "to": "0xbb145ca83272c3806d4ddc75ca1d5514789cf1c5",
+      "tx": "0x7ed5fa5dbd347c04150909967fc859c137a9f5109ea07e7fd01651f49d472be2",
+      "sentBy": "0xbb145ca83272c3806d4ddc75ca1d5514789cf1c5"
+    }
+  ],
+  "operatorChanges": [],
+  "moduleChanges": [
+    {
+      "block": 26334469,
+      "time": "2026-11-03 13:07:11 UTC",
+      "from": "0x71a8f53e9f4a67aa6acbb9d722b4ac9f36ffd069",
+      "to": "0x0f4a7e25598eb4593384f945adfd9623f20e7c6b",
+      "label": "Days 4-7 floor-reserve module (program 0xcc2fb4fa0945d717a31fdad478a47566d7ba5bab, adapter created same block, tx 0x2f50ca59e482abbf111cd19a10734da50f0a1b21b0c35aa86fb0b7c1348433ff)",
+      "tx": "0x87d9bce7707d565805ac886e3d63e83db9191b68f9e16018dbce433626284ebf",
+      "sentBy": "operator 0xab716305e5a8854c0dd08397087dbdd56ea32073 via controller",
+      "notice": "Thread x.com/contractclaus/status/2117592247122252144 at 12:18 UTC promised activation at least 1 h later (about 13:18 UTC); switched about 11 min early. Detected by our watcher 13:29 UTC; Blockpin alert posted 16:01 UTC (x.com/holdembuilds/status/2117648306302259587). Claus confirmed the early switch himself."
+    },
+    {
+      "block": 26352214,
+      "time": "2026-11-06 00:27:11 UTC",
+      "from": "0x0f4a7e25598eb4593384f945adfd9623f20e7c6b",
+      "to": "0x19de13a398a4e527e81d220ed48538a8de69fdbe",
+      "label": "Treasury-only module: full 2.3% to vault 0x49A91293a8dFf24d5c54b798C45376301D29b9f3 for CLAUS DEV; new NFT reward allocations stopped (per Claus, TG 6 Nov)",
+      "tx": "0x3e643df1e3d8cc30fc3f0d99bae9cda9dfae5ac3bcc65769776acbb175217cbb",
+      "sentBy": "founder 0xbb14\u2026f1c5 through contract 0xdb9b1e94b5b69df7e401ddbede43491141047db3, two blocks after taking token ownership back",
+      "notice": "No 1 h public notice found before this switch; Claus later said the NFT share was paused without a vote or notice. Blockpin alert posted 6 Nov 16:22 UTC (x.com/holdembuilds/status/2118740781657669994)."
+    }
+  ],
+  "execution": {
+    "tradesRecorded": 2766,
+    "tradesExecuted": 785,
+    "byModule": {
+      "0x19de13a398a4e527e81d220ed48538a8de69fdbe": {
+        "recorded": 1879,
+        "executed": 0,
+        "recordedNotExecuted": 1879
+      },
+      "0x0f4a7e25598eb4593384f945adfd9623f20e7c6b": {
+        "recorded": 845,
+        "executed": 618,
+        "recordedNotExecuted": 227
+      },
+      "0x71a8f53e9f4a67aa6acbb9d722b4ac9f36ffd069": {
+        "recorded": 42,
+        "executed": 45,
+        "recordedNotExecuted": 0
+      },
+      "0xde812d12c3f02b9582c4775585de928fa7142d71": {
+        "recorded": 0,
+        "executed": 122,
+        "recordedNotExecuted": 0
+      }
+    },
+    "note": "Under the treasury-only module 0x19de (from 6 Nov 00:27 UTC) trades are recorded and fees settle by claim to a fixed recipient, so no execute calls are expected; its 0 executions are by design, not a gap.",
+    "gapsWhileExecuteExpected": [
+      {
+        "fromBlock": 26343533,
+        "toBlock": 26347275,
+        "from": "2026-11-04 19:26:47 UTC",
+        "to": "2026-11-05 07:55:47 UTC",
+        "hours": 12.5
+      },
+      {
+        "fromBlock": 26349781,
+        "toBlock": 26351964,
+        "from": "2026-11-05 16:18:59 UTC",
+        "to": "2026-11-05 23:36:59 UTC",
+        "hours": 7.3
+      },
+      {
+        "fromBlock": 26338866,
+        "toBlock": 26340320,
+        "from": "2026-11-04 03:49:47 UTC",
+        "to": "2026-11-04 08:41:59 UTC",
+        "hours": 4.9
+      }
+    ],
+    "daysFourToSevenNeverExecuted": {
+      "count": 227,
+      "idRange": [
+        7560,
+        7787
+      ],
+      "note": "Receipts recorded under 0x0f4a from 5 Nov 01:59 UTC until the 6 Nov switch with no TradeExecuted by the end block. Same pattern as the replaced-module receipts raised in W44."
+    },
+    "oldReceiptsExecutedByFounder": {
+      "block": 26371721,
+      "time": "2026-11-08 17:42 UTC",
+      "count": 122,
+      "idRange": [
+        4541,
+        4863
+      ],
+      "module": "0xde812d12c3f02b9582c4775585de928fa7142d71",
+      "txs": [
+        "0x12ed89a32f2a28801c18f753b4ee9ccc82c00fbe6ba5d1e7bb2a8791e5af9ab4",
+        "0xc4bbed552ac2f4be8898561e9d992c1e9f2a7f5c885c20fcd2808da073c15e84"
+      ],
+      "sentBy": "founder via 0xdb9b1e94\u2026"
+    }
+  },
+  "burns": {
+    "migrationGate1": {
+      "events": 1,
+      "clausBurned": 30936562.059704,
+      "txs": 1,
+      "firstBlock": 26351985,
+      "lastBlock": 26351985,
+      "txList": [
+        "0xf4a060062962460dd72c48240a91b8d4d245e0da9c977e7ec7e11d71b111041d"
+      ],
+      "gate": "0x30fe333a23c83a1746a9e223c540b827d64c8998",
+      "note": "Single burn by the founder: the 30.94M CLAUS from LP withdrawal 1, migrated through gate 1."
+    },
+    "migrationGate2": {
+      "events": 141,
+      "clausBurned": 208385427.765721,
+      "txs": 141,
+      "firstBlock": 26352201,
+      "lastBlock": 26357817,
+      "txList": null,
+      "gate": "0xfdeaef792f69ce94260a16e427e13ce6c9111976",
+      "closedBlock": 26357823,
+      "closedTime": "2026-11-06 19:12:35 UTC",
+      "closeTx": "0xa61623a9b421f08329867699b077f7121cb294bf186072033bb29de34f9c38b0",
+      "closedBy": "0xbb145ca83272c3806d4ddc75ca1d5514789cf1c5"
+    },
+    "keeperBuybackBurns": {
+      "events": 1,
+      "clausBurned": 79456.986301,
+      "txs": 1,
+      "firstBlock": 26369226,
+      "lastBlock": 26369226,
+      "txList": [
+        "0x8ec579a625185d7a012818bc60210f32fe640c0ceecdbc9a02294ad35cb4489b"
+      ],
+      "note": "One buyback run in the window (8 Nov). Buybacks effectively stopped after the treasury-only switch."
+    },
+    "hookBurns10Nov": {
+      "events": 590,
+      "clausBurned": 43329928.291315,
+      "txs": 4,
+      "firstBlock": 26381835,
+      "lastBlock": 26381836,
+      "txList": [
+        "0x105daded45e1f7e9a49995e29a96a7bbaf641ee6f6b760e3e39a0668f2cdbf7e",
+        "0xaf8ba1d41ea2a764a1deb83bc4dfd6101af22a8591bf2e5fa43f02047e5e247c",
+        "0xbb5984f28abfa32eff624a110f9237ee1fa880c1c2acca8cc7c55a22e776607a",
+        "0xf278af8685b0106b347e4f293ae7eacce573a8ba019f55b86365fcf1ab02d149"
+      ],
+      "note": "43.33M CLAUS held by the hook 0x37bf\u2026bfff was burned at 03:31 UTC 10 Nov in 4 transactions sent by outside wallets (0x6ad3fb58\u2026 via 0xf675fcd0\u2026, and 0x9235910f\u2026 via 0x00000f91\u2026), each looping 35-185 small swaps through the hooked pool; on every swap the pool sent CLAUS to the hook and the hook burned it. Hook CLAUS balance afterwards: 0. Not triggered by Claus or the keeper. Why the hook held this CLAUS and whether the callers profited is not yet traced; question sent to Claus."
+    }
+  },
+  "founderLiquidityAndOldClaus": {
+    "withdrawals": [
+      {
+        "n": "1",
+        "tx": "0xa54dcc6f1c671bee51572da5e83cc34a2bfa172bd30230c8aa2d315b450fe0d6",
+        "block": 26351963,
+        "time": "2026-11-05 23:36:47 UTC",
+        "clausOut": 30936562.05970427
+      },
+      {
+        "n": "2",
+        "tx": "0xf1c8e261c23e3053e56ad14c1bc369508ed038baa0c84b7321fbd806e03bd9e1",
+        "block": 26352744,
+        "time": "2026-11-06 02:13:23 UTC",
+        "clausOut": 8255769.414103683
+      },
+      {
+        "n": "3",
+        "tx": "0x086f7bf01b6e3eeebfb4882115b1e64e21c2d5a076530dcb748e7942d029207e",
+        "block": 26354897,
+        "time": "2026-11-06 09:24:59 UTC",
+        "clausOut": 5797734.250640456
+      },
+      {
+        "n": "4",
+        "tx": "0x81fe600af5c8285f6f9d3e57332e6e96b410d5a8265e94f3f3c6e5bd7a451eb9",
+        "block": 26357840,
+        "time": "2026-11-06 19:15:59 UTC",
+        "clausOut": 14011376.644087331
+      }
+    ],
+    "whereTheOldClausWent": [
+      {
+        "withdrawal": 1,
+        "clausM": 30.94,
+        "outcome": "migrated through gate 1",
+        "block": 26351985,
+        "tx": "0xf4a060062962460dd72c48240a91b8d4d245e0da9c977e7ec7e11d71b111041d"
+      },
+      {
+        "withdrawal": 2,
+        "clausM": 8.26,
+        "outcome": "migrated through gate 2",
+        "block": 26352755
+      },
+      {
+        "withdrawal": 3,
+        "clausM": 5.8,
+        "outcome": "migrated through gate 2",
+        "block": 26354925
+      },
+      {
+        "withdrawal": 4,
+        "clausM": 14.01,
+        "outcome": "withdrawn 3 min after gate 2 closed, then sold on Ethereum at 21:23 UTC 6 Nov through 0x74de5d4f\u2026",
+        "block": 26358474,
+        "tx": "0x2fc28d2accad57c79a7fb9ed7965ca5108d1a71a7e56aea566bd515ef0207bc2",
+        "note": "Claus says (TG 9 Nov) the same 14.01M was credited on Robinhood by the snapshot (11.0M added to the Robinhood pool, 3.0M kept in 0xbb14); he called the sale a fair criticism."
+      }
+    ],
+    "otherFounderTransfers": [
+      {
+        "what": "80,000 USDC to 0xa9e16f2b0e3daea32cce15b27b4bbb62a3d4708e",
+        "block": 26359078,
+        "time": "2026-11-06 23:24:59 UTC",
+        "tx": "0x94e75655672cc8b803deb9cefae74b79687ce122c562d8f4be5affa817db42ec"
+      }
+    ],
+    "note": "All CLAUS transfers out of 0xbb14 in the window are the four above. Old Ethereum CLAUS cannot be bridged; only the ETH crossed to Robinhood."
+  },
+  "notCovered": "Robinhood Chain contracts (the agreed Robinhood watch is not posted as a task yet); Buy & Hodl winner payouts and draw rounds (not traced this week).",
+  "method": "eth_call (owner, pendingOwner, operator, activeModule) at the end block via publicnode; event logs of the token (ownership, burns to 0x0), controller and TradeExtensionHost (TradeRecorded, TradeExecuted, ModuleChanged) from Blockscout and rpc.mevblocker.io; transaction receipts for every listed tx. Times UTC."
+}

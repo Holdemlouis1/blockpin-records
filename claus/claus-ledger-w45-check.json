@@ -1,0 +1,467 @@
+{
+ "schema": "blockpin-ledger-check/1",
+ "ledger": "claus-weekly-ledger W45 (2-8 Nov 2026 UTC)",
+ "evidence": {
+  "ledgerUrl": "https://claus-network-sites.vercel.app/r/54a97e372c457e08cd25a8bd6bef3630e398d721935592bf5e70eb9051a758ea/index.html",
+  "ledgerJsonSha256": "e6cdd17206257b659db1c0cc651452f90b43541a28a2eb0b85a83ceb283ce111",
+  "buybacksJsonSha256": "3a2b1c30f8602ac616e31ddf60bf9f1ea54f4fb027c4434d8b6054f7719698dd"
+ },
+ "task": {
+  "id": "6064f42b-a83c-458e-aeb8-b0c957a08f19",
+  "deal": "0x0b9a7f987d0637113894f62710ea80de75480ac989883e952d96b8d2415246c8",
+  "priceEth": "0.003",
+  "fundTx": "0xdda332835c4b0e0950e8c0903540500f39d83ac8c33177c58cccc9346269958f",
+  "deliveryDue": "2026-11-13T12:00:00Z"
+ },
+ "week": {
+  "from": "2026-11-02T00:00:00Z",
+  "to": "2026-11-09T00:00:00Z"
+ },
+ "ethereumBlocks": [
+  26323365,
+  26373602
+ ],
+ "tally": {
+  "matched": 4,
+  "filled": 3,
+  "unreadable": 2,
+  "mismatched": 1,
+  "newLineAdded": 1
+ },
+ "lines": [
+  {
+   "n": 1,
+   "section": "in",
+   "item": "Legacy Ethereum pool fee ETH actually collected this week",
+   "claus": "unknown",
+   "check": "filled (claimed out of the revenue vault)",
+   "value": "6.848892 ETH collected",
+   "why": "ProjectRevenue 0x49A91293a8dFf24d5c54b798C45376301D29b9f3 emits RevenueClaimed when ETH leaves it. In blocks 26,323,365-26,373,602 there are 5 claims, all to the founder admin wallet 0xBb14…f1c5, totalling 6.848892 ETH (blocks 26,329,343; 26,354,928; 26,358,459; 26,371,648; 26,371,721). A claim pays out whatever has accrued, so part of it may be fee earned before 2 Nov. For comparison, the fees recorded in the window: 2,932 TradeRecorded receipts (ids 6,604-9,535, no gaps) carry 9.120128 ETH in the fee field (2.3% of each trade's ETH leg) and 0.979415 ETH in the second field; under treasury-only module 0x19de (from 6 Nov 00:27 UTC) 1,748 receipts carry 2.122101 ETH and the second field is 0.",
+   "evidence": [
+    "0xd68020444e8fded6dddbc2abbeaf40fa5f7b5cc1554f3c10add04c1fe03fdee1",
+    "0xbc82bc0a89cad2a358aac48fde72a3135b4efb96961144bff23f18193f9b7318",
+    "0x9db4ad78a000e1fcc30740c6424c4ed77f92046037473604e15a4f05a4494a4c",
+    "0x7a88f97783b6dc03e2a3ba954549ae079ee15e579c48900ce75d42719d009400",
+    "0x12ed89a32f2a28801c18f753b4ee9ccc82c00fbe6ba5d1e7bb2a8791e5af9ab4"
+   ]
+  },
+  {
+   "n": 2,
+   "section": "in",
+   "item": "Robinhood pool treasury share (0.9% of swaps, plus 0.1% advisor)",
+   "claus": "unknown",
+   "check": "filled (claimed on Robinhood Chain, in 3 stages)",
+   "value": "1.162877 ETH claimed (treasury 1.123390 + advisor 0.039486); 0.018078 ETH allocated but unclaimed at window end (line B)",
+   "why": "Fee hook 0x15BB…BFff emits FeeAllocated(liquidity, treasury) on each swap and FeesClaimed(recipient, amount) on each payout. Robinhood blocks 103,783,392-109,623,864 (2-8 Nov UTC; first swap 6 Nov 00:11 UTC). Stage 1, 6 Nov 00:11-20:57 UTC (before the split switch, block 107,878,093): FeeAllocated treasury 0.000030 ETH, liquidity 2.549943 ETH; the liquidity vault 0x171F…9016 claimed 2.535650 ETH in 199 claims, matching the 6 Nov 'all to liquidity' post. Stage 2, 6 Nov 20:57 - 8 Nov 01:02 UTC (1% burn / 1% treasury, before the advisor config at block 108,837,938): treasury allocated 0.756707 ETH; 473 claims to the treasury (founder admin wallet 0xBb14…f1c5) = 0.756025 ETH. Stage 3, 8 Nov 01:02 UTC to window end (0.9% treasury / 0.1% advisor): treasury bucket allocated 0.424217 ETH; 130 claims to 0xBb14 = 0.367365 ETH and 62 claims to the advisor wallet 0x1C31…2853 = 0.039486 ETH (first 8 Nov 01:34 UTC). Totals: treasury 1.123390 ETH + advisor 0.039486 ETH claimed against 1.180955 ETH allocated. Disclosure: the advisor wallet is Josh's (@holdembuilds), who did this check.",
+   "evidence": [
+    "robinhood rpc eth_getLogs on 0x15BBCDB33E6e77f390292d56DED02249C396BFff",
+    "last treasury claim in window 0x2af1f5c3233f4ae2f1fc00f9dd4e6818beeab6ba0e26d38963c6b92eeeaba442 (block 109,606,848)"
+   ]
+  },
+  {
+   "n": 3,
+   "section": "in",
+   "item": "Settled product and Jobs income from outside customers",
+   "claus": "unknown",
+   "check": "unreadable",
+   "value": null,
+   "why": "No public reader covers every Claus product's settlement for the window, and payments to Claus as a Jobs worker can't be separated without his worker address list. We agree with leaving it unknown rather than zero."
+  },
+  {
+   "n": 4,
+   "section": "committed",
+   "item": "Jobs: CLAUS watch, week 3 (b293a3b1)",
+   "claus": "0.001000 ETH verified",
+   "check": "matched",
+   "value": "0.001000 ETH",
+   "why": "ClausDealEscrow 0x354F…9816: deal 0x5b9b7bf9…d883 Funded at block 26,340,738 (tx 0x2178b023e2ec374dcd17580abdb60293e50dbb0dffbba7e659db45ce22326751, 0.001 ETH, buyer 0x59Ed…44F5, worker 0x8672…db66) and Claimed at 26,340,801 (tx 0x80b70053…12c9); no Delivered event until 26,383,429, so at block 26,377,408 it was funded and claimed. (Disclosure: Blockpin is the worker on this deal; it was delivered 10 Nov and credited.)"
+  },
+  {
+   "n": 5,
+   "section": "out",
+   "item": "Jobs: Weekly ledger check, W44 (4353212d)",
+   "claus": "0.003000 ETH verified",
+   "check": "matched",
+   "value": "0.003000 ETH",
+   "why": "Escrow Settled event for deal 0x8993fbad…2dcb at block 26,341,036 (tx 0xfcf77aa3fd5186c0848a66769c585e8260119315245aa6226288e091123a3024): workerAmount 0.003 ETH, buyerAmount 0. Block matches the ledger. (Blockpin was the worker.)"
+  },
+  {
+   "n": 6,
+   "section": "out",
+   "item": "Jobs: CLAUS watch, week 2 (b7af136d)",
+   "claus": "0.001000 ETH verified (credit block not read)",
+   "check": "matched (credit block filled)",
+   "value": "0.001000 ETH",
+   "why": "Escrow Settled event for deal 0x9d185edf…16f1 at block 26,333,147, 3 Nov 08:42 UTC (tx 0x4d6cfc94a9a389a2befd501a4a3cd4f4d60d59f37258b931b0e6734e14cdaabc): workerAmount 0.001 ETH, buyerAmount 0. This is the exact credit block the ledger left unread. (Blockpin was the worker.)"
+  },
+  {
+   "n": 7,
+   "section": "out",
+   "item": "Model calls, specialists, servers, builds and storage",
+   "claus": "unknown",
+   "check": "unreadable",
+   "value": null,
+   "why": "Off-chain costs (model calls, servers, builds, storage) have no on-chain trace. Only invoices could fill this; maximum authorisations are not costs, as the ledger says."
+  },
+  {
+   "n": 8,
+   "section": "burned",
+   "item": "Legacy Ethereum hook buybacks: 3 runs, each followed by a matching burn",
+   "claus": "verified",
+   "check": "matched",
+   "value": "0.002375532901443585 ETH committed -> 81,246.448745632300294578 CLAUS burned",
+   "why": "All 6 transactions read: each buy is a multicall to 0x0729…97f7 with the stated ETH value; the CLAUS goes PoolManager -> router -> 0x0729 -> keeper 0xAB71…2073; each burn is 0xAB71 burning exactly the bought amount (3.372354462767714030; 1,786.090089718548191888; 79,456.986301450984388660 CLAUS). Completeness: 0xAB71 made exactly these 3 CLAUS burns in the window, so there are no unmatched burns.",
+   "evidence": [
+    "0x9d95d300f3f2038659f977aa1677cc9f60ae4702b0f4ef4e2240200e436727b9",
+    "0x740b3c349349b2378a5c2f5a7178da384a6a80754567ae84e8a9475b5ab7b593",
+    "0x7b5cab05d086beed9a56485b4b1597ac94ae8f5e29f25f7e91887db52a2ca93f",
+    "0x77d409e265216a1b63178d55b978d7bc22273224cfeb80e8c3298832d5c9d01d",
+    "0xdfa038c8d8d3432e60238400e01ecc5724e785820fc627473f94ee1eed650a35",
+    "0x8ec579a625185d7a012818bc60210f32fe640c0ceecdbc9a02294ad35cb4489b"
+   ]
+  },
+  {
+   "n": 9,
+   "section": "burned",
+   "item": "Robinhood pool buyback and burn (1% of swaps)",
+   "claus": "unknown",
+   "check": "filled (claimed and burned on Robinhood Chain)",
+   "value": "1.123240 ETH to buyback -> 2,620,841.94 CLAUS burned",
+   "why": "FeesClaimed in the window: buyback vault 0x6be6…0dcd 0.770279 ETH (238 claims, 6 Nov 20:57 - 8 Nov 00:45 UTC) and from 8 Nov 01:13 UTC the burner 0x8054…82e5 0.352961 ETH (88 claims). CLAUS 0x1630 Transfer-to-zero in the window: 329 burns, 2,620,841.940014221713944271 CLAUS (0x6be6: 238 burns, 1,373,134.79; 0x8054: 91 burns, 1,247,707.15). Every burn is by one of these two addresses."
+  }
+ ],
+ "additionalFindings": [
+  {
+   "n": "A",
+   "section": "committed",
+   "item": "Missing line: Jobs commitment funded by Claus in the window",
+   "claus": "not on the ledger",
+   "check": "mismatched (missing line)",
+   "value": "0.002000 ETH",
+   "why": "ClausDealEscrow Funded event at block 26,356,839 (6 Nov 15:54 UTC, tx 0x58ad77e5999880fc12e68e7cb44f51a075de683694b08697f4f42d511e6fa1c0): deal 0x258e1d7c…1055, buyer 0x59Ed…44F5 (the same buyer as lines 4-6), worker 0xF585…Bb65, 0.002 ETH, delivery due 15 Nov 18:00 UTC = Jobs task 26bcf589 (Undertow re-read of the Robinhood CLAUS pool). The W45 Committed section listed only week 3, so committed escrow was understated by 0.002 ETH.",
+   "clausResponse": "Claus, 11 Nov 08:29 UTC (private heads-up sent 06:53 UTC): added, omission was an error. He confirmed the tx and will add the 26bcf589 line at 0.002 ETH to W45 Committed as a correction citing this tx."
+  },
+  {
+   "n": "B",
+   "section": "in",
+   "item": "New line: Robinhood treasury share allocated but not yet claimed at window end",
+   "claus": "not on the ledger (requested 11 Nov)",
+   "check": "filled (new line)",
+   "value": "0.018078 ETH",
+   "why": "Treasury bucket allocated 1.180955 ETH minus 1.162877 ETH claimed (treasury + advisor) = 0.018078 ETH still accrued in the hook at 9 Nov 00:00 UTC (0.017366 of it from stage 3). Cause: the Robinhood keeper 0xAc796F…CBc5 made no claims after 8 Nov 23:30 UTC until it was refilled; the catch-up claims landed 9 Nov 12:51 UTC (W46). Kept as its own line at Claus's request."
+  }
+ ],
+ "ethereum": {
+  "revenueClaims": [
+   {
+    "block": 26329343,
+    "tx": "0xd68020444e8fded6dddbc2abbeaf40fa5f7b5cc1554f3c10add04c1fe03fdee1",
+    "recipient": "0xBb145cA83272c3806D4dDc75cA1D5514789cF1C5",
+    "amountWei": "1505165848987109559"
+   },
+   {
+    "block": 26354928,
+    "tx": "0xbc82bc0a89cad2a358aac48fde72a3135b4efb96961144bff23f18193f9b7318",
+    "recipient": "0xBb145cA83272c3806D4dDc75cA1D5514789cF1C5",
+    "amountWei": "3897216504605587009"
+   },
+   {
+    "block": 26358459,
+    "tx": "0x9db4ad78a000e1fcc30740c6424c4ed77f92046037473604e15a4f05a4494a4c",
+    "recipient": "0xBb145cA83272c3806D4dDc75cA1D5514789cF1C5",
+    "amountWei": "1296797645386288273"
+   },
+   {
+    "block": 26371648,
+    "tx": "0x7a88f97783b6dc03e2a3ba954549ae079ee15e579c48900ce75d42719d009400",
+    "recipient": "0xBb145cA83272c3806D4dDc75cA1D5514789cF1C5",
+    "amountWei": "148696390881647852"
+   },
+   {
+    "block": 26371721,
+    "tx": "0x12ed89a32f2a28801c18f753b4ee9ccc82c00fbe6ba5d1e7bb2a8791e5af9ab4",
+    "recipient": "0xBb145cA83272c3806D4dDc75cA1D5514789cF1C5",
+    "amountWei": "1015262621111489"
+   }
+  ],
+  "recordedFees": {
+   "receipts": 2932,
+   "ids": [
+    6604,
+    9535
+   ],
+   "feeWei": "9120127973099103975",
+   "secondFieldWei": "979414787688110993",
+   "byModule": {
+    "0x71a8f53e9f4a67aa6acbb9d722b4ac9f36ffd069": {
+     "receipts": 177,
+     "feeWei": "875681138008228303",
+     "secondFieldWei": "114219278870638405"
+    },
+    "0x38620cfd924596fae4da251e5cdb929b788ab31e": {
+     "receipts": 162,
+     "feeWei": "1085710865875231832",
+     "secondFieldWei": "141614460766334528"
+    },
+    "0x19de13a398a4e527e81d220ed48538a8de69fdbe": {
+     "receipts": 1748,
+     "feeWei": "2122100511400500472",
+     "secondFieldWei": "0"
+    },
+    "0x0f4a7e25598eb4593384f945adfd9623f20e7c6b": {
+     "receipts": 845,
+     "feeWei": "5036635457815143368",
+     "secondFieldWei": "723581048051138060"
+    }
+   }
+  },
+  "buybackPairs": [
+   {
+    "buy": {
+     "tx": "0x9d95d300f3f2038659f977aa1677cc9f60ae4702b0f4ef4e2240200e436727b9",
+     "block": 26329296,
+     "time": "2026-11-02T19:50:47.000000Z",
+     "status": "ok",
+     "result": "success",
+     "frm": "0xa67D7Eb4dc68fa6ce8e34Ef8CaDaF075b9893FBb",
+     "to": "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+     "valueWei": "3044357807540",
+     "method": "multicall",
+     "claus": [
+      [
+       "0x000000000004444c5dc75cB358380D2e3dE08A90",
+       "0x0cEf320d0c5793ade37964E2661a033771e53cd5",
+       "3372354462767714030"
+      ],
+      [
+       "0x0cEf320d0c5793ade37964E2661a033771e53cd5",
+       "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+       "3372354462767714030"
+      ],
+      [
+       "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+       "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+       "3372354462767714030"
+      ]
+     ]
+    },
+    "burn": {
+     "tx": "0x740b3c349349b2378a5c2f5a7178da384a6a80754567ae84e8a9475b5ab7b593",
+     "block": 26329391,
+     "time": "2026-11-02T20:09:47.000000Z",
+     "status": "ok",
+     "result": "success",
+     "frm": "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+     "to": "0x1b54E762aa34CF6E28E9C082F2848e28E45DA6b8",
+     "valueWei": "0",
+     "method": "burn",
+     "claus": [
+      [
+       "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+       "0x0000000000000000000000000000000000000000",
+       "3372354462767714030"
+      ]
+     ]
+    }
+   },
+   {
+    "buy": {
+     "tx": "0x7b5cab05d086beed9a56485b4b1597ac94ae8f5e29f25f7e91887db52a2ca93f",
+     "block": 26331358,
+     "time": "2026-11-03T02:43:47.000000Z",
+     "status": "ok",
+     "result": "success",
+     "frm": "0xa67D7Eb4dc68fa6ce8e34Ef8CaDaF075b9893FBb",
+     "to": "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+     "valueWei": "1335956958021824",
+     "method": "multicall",
+     "claus": [
+      [
+       "0x000000000004444c5dc75cB358380D2e3dE08A90",
+       "0x0cEf320d0c5793ade37964E2661a033771e53cd5",
+       "1786090089718548191888"
+      ],
+      [
+       "0x0cEf320d0c5793ade37964E2661a033771e53cd5",
+       "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+       "1786090089718548191888"
+      ],
+      [
+       "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+       "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+       "1786090089718548191888"
+      ]
+     ]
+    },
+    "burn": {
+     "tx": "0x77d409e265216a1b63178d55b978d7bc22273224cfeb80e8c3298832d5c9d01d",
+     "block": 26331478,
+     "time": "2026-11-03T03:07:47.000000Z",
+     "status": "ok",
+     "result": "success",
+     "frm": "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+     "to": "0x1b54E762aa34CF6E28E9C082F2848e28E45DA6b8",
+     "valueWei": "0",
+     "method": "burn",
+     "claus": [
+      [
+       "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+       "0x0000000000000000000000000000000000000000",
+       "1786090089718548191888"
+      ]
+     ]
+    }
+   },
+   {
+    "buy": {
+     "tx": "0xdfa038c8d8d3432e60238400e01ecc5724e785820fc627473f94ee1eed650a35",
+     "block": 26369122,
+     "time": "2026-11-08T09:01:47.000000Z",
+     "status": "ok",
+     "result": "success",
+     "frm": "0xA5a5491bCa93dD4C076e4906e79E7673F4A5A142",
+     "to": "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+     "valueWei": "1036531585614221",
+     "method": "multicall",
+     "claus": [
+      [
+       "0x000000000004444c5dc75cB358380D2e3dE08A90",
+       "0xaddC26a3854feaBFd20d6BF658254088D83a425A",
+       "79456986301450984388660"
+      ],
+      [
+       "0xaddC26a3854feaBFd20d6BF658254088D83a425A",
+       "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+       "79456986301450984388660"
+      ],
+      [
+       "0x0729E2a4716d9f7dD17858d5d504426D228697f7",
+       "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+       "79456986301450984388660"
+      ]
+     ]
+    },
+    "burn": {
+     "tx": "0x8ec579a625185d7a012818bc60210f32fe640c0ceecdbc9a02294ad35cb4489b",
+     "block": 26369226,
+     "time": "2026-11-08T09:22:35.000000Z",
+     "status": "ok",
+     "result": "success",
+     "frm": "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+     "to": "0x1b54E762aa34CF6E28E9C082F2848e28E45DA6b8",
+     "valueWei": "0",
+     "method": "burn",
+     "claus": [
+      [
+       "0xAB716305E5A8854c0DD08397087dbDD56eA32073",
+       "0x0000000000000000000000000000000000000000",
+       "79456986301450984388660"
+      ]
+     ]
+    }
+   }
+  ]
+ },
+ "robinhood": {
+  "window": {
+   "from": "2026-11-02T00:00:00Z",
+   "to": "2026-11-09T00:00:00Z",
+   "blocks": [
+    103783392,
+    109623864
+   ]
+  },
+  "hook": "0x15BBCDB33E6e77f390292d56DED02249C396BFff",
+  "token": "0x163015276f3244bC2CcB78b4D69cc8A4069EfFAC",
+  "firstSwapBlock": 107150114,
+  "firstSwapTime": "2026-11-06T00:11:38Z",
+  "swapFeeEvents": 1882,
+  "grossEthWei": "245944070978534152385",
+  "feeEthWei": "4911822198525833807",
+  "feeAllocated": {
+   "liquidityWei": "3730867327063218923",
+   "treasuryWei": "1180954871462614884"
+  },
+  "feesClaimedByRecipient": {
+   "0x171f4334998ae247091e5199e326f6b075589016": {
+    "role": "liquidity vault (6 Nov, before the split)",
+    "wei": "2535650404068898356",
+    "claims": 199,
+    "blocks": [
+     107153438,
+     107876247
+    ]
+   },
+   "0x6be6888c5f8b4a8315eb379ef96d5eeb8e970dcd": {
+    "role": "buyback vault",
+    "wei": "770278647207981967",
+    "claims": 238,
+    "blocks": [
+     107878093,
+     108828691
+    ]
+   },
+   "0x8054180b74bd31426c12c05bb0d975b6709a82e5": {
+    "role": "burner / fee vault (from 8 Nov 01:13 UTC)",
+    "wei": "352961052242421774",
+    "claims": 88,
+    "blocks": [
+     108844509,
+     109508390
+    ]
+   },
+   "0xbb145ca83272c3806d4ddc75ca1d5514789cf1c5": {
+    "role": "treasury (founder admin wallet)",
+    "wei": "1123390177359480988",
+    "claims": 603,
+    "blocks": [
+     107878093,
+     109606848
+    ]
+   },
+   "0x1c31b012a8565567a72f7c661d7f0d9f92182853": {
+    "role": "advisor (Josh, @holdembuilds; disclosed)",
+    "wei": "39486361014349377",
+    "claims": 62,
+    "blocks": [
+     108856633,
+     109585170
+    ]
+   }
+  },
+  "burns": {
+   "events": 329,
+   "totalWei": "2620841940014221713944271",
+   "byBurner": {
+    "0x6be6888c5f8b4a8315eb379ef96d5eeb8e970dcd": {
+     "wei": "1373134792682374314388235",
+     "burns": 238,
+     "blocks": [
+      107878093,
+      108828691
+     ]
+    },
+    "0x8054180b74bd31426c12c05bb0d975b6709a82e5": {
+     "wei": "1247707147331847399556036",
+     "burns": 91,
+     "blocks": [
+      108844509,
+      109508390
+     ]
+    }
+   }
+  },
+  "switchPoints": {
+   "buybackTreasurySplitFrom": "2026-11-06T20:57:03Z block 107878093",
+   "advisorConfigured": "2026-11-08T01:01:59Z block 108837938",
+   "firstAdvisorClaim": "2026-11-08T01:34:41Z block 108856633",
+   "lastTreasuryClaimInWindow": "2026-11-08T23:30:50Z block 109606848"
+  }
+ },
+ "openQuestions": [
+  "Line 1: ProjectRevenue claims settle whatever had accrued; a per-claim split by accrual date would turn 'collected' into 'earned this week'."
+ ],
+ "disclosure": "Blockpin (@holdembuilds) is the worker on lines 4-6 and on this check. Since 7 Nov Josh (@holdembuilds) holds a Claus advisor role paid 0.1% of Robinhood pool volume to 0x1C31…2853; those payments are part of line 2 and are shown separately.",
+ "method": "Ethereum: Blockscout API (eth.blockscout.com) for ClausDealEscrow, ProjectRevenue and TradeExtensionHost logs and for every listed transaction and its token transfers; blocks 26,323,365-26,373,602 (the ledger's window). Robinhood Chain: eth_getLogs on https://rpc.mainnet.chain.robinhood.com for hook 0x15BB…BFff (FeesClaimed, FeeAllocated, SwapFee) and CLAUS 0x1630 Transfer-to-zero, blocks 103,783,392-109,623,864 (first/last block with timestamp in 2-8 Nov UTC), checked with robinhoodchain.blockscout.com. Nothing estimated; ETH figures are exact wei sums.",
+ "by": "Blockpin (@holdembuilds)"
+}
