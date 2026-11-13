@@ -1,0 +1,513 @@
+{
+  "dataset": "CLAUS identity-question labelled set",
+  "task": "baf245bc-29cc-4521-bd69-e0145033259f",
+  "delivered_by": "Blockpin (@holdembuilds)",
+  "collected": "2026-10-30, X web search and @contractclaus replies, logged-in browser, public posts only",
+  "labels": {
+    "yes": "genuine question whether a token is the real CLAUS",
+    "ambiguous": "borderline; see note",
+    "no": "not an identity question"
+  },
+  "rules": "Addresses recorded verbatim, case preserved; truncated=true where the post itself shows a shortened value. text_excerpt is a short excerpt as displayed, not the full post. No private messages, no manufactured posts.",
+  "summary": {
+    "posts": 30,
+    "with_0x": 6,
+    "with_0x_not_by_delivering_account": 3,
+    "yes": 1,
+    "ambiguous": 7,
+    "no": 22
+  },
+  "posts": [
+    {
+      "n": 1,
+      "post_id": "2106877532888875217",
+      "url": "https://x.com/hazarxyz/status/2106877532888875217",
+      "author": "@hazarxyz",
+      "created_at": "2026-10-04T22:42:02Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "Had a lot of fun helping @founderclaus build @contractclaus. The team insisted on Ethereum mainnet over Robinhood Chain"
+    },
+    {
+      "n": 2,
+      "post_id": "2107240216759320609",
+      "url": "https://x.com/levelsdennis/status/2107240216759320609",
+      "author": "@levelsdennis",
+      "created_at": "2026-10-05T22:43:12Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "ambiguous",
+      "note": "About a fake CLAUS coin (links x.com/ClausCoinETH, says it has 0 holders and one owner of 97%). Identity topic, but a statement, not a question.",
+      "text_excerpt": "pretty sure what happened is this account mass reported you ... the fake coin has 0 holders on fomo and he owns 97% of the supply"
+    },
+    {
+      "n": 3,
+      "post_id": "2107294919442538894",
+      "url": "https://x.com/minse_096/status/2107294919442538894",
+      "author": "@minse_096",
+      "created_at": "2026-10-06T02:20:35Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "yes",
+      "note": "Asks whether the token showing as ticker SAME on gmgn, with the same CA, is still their CLAUS.",
+      "text_excerpt": "wait did our ticker also changed but with the same CA? its now called SAME on gmgn"
+    },
+    {
+      "n": 4,
+      "post_id": "2107301443187478684",
+      "url": "https://x.com/OGDfarmer/status/2107301443187478684",
+      "author": "@OGDfarmer",
+      "created_at": "2026-10-06T02:46:30Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "ambiguous",
+      "note": "Asks 'is this confirmed?' about Claus respawning after the account issues; unclear if it is about which token is real.",
+      "text_excerpt": "Is this confirmed? I read the clanker saying it can respawn, was it hallucinating?"
+    },
+    {
+      "n": 5,
+      "post_id": "2107364612937265646",
+      "url": "https://x.com/fx_builder/status/2107364612937265646",
+      "author": "@fx_builder",
+      "created_at": "2026-10-06T06:57:31Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [
+        {
+          "value": "0x1b54e762aa34cf6e28e9c082f2848e28e45da6b8",
+          "kind": "token contract (matches CLAUS)",
+          "truncated": false
+        }
+      ],
+      "has_0x": true,
+      "label_is_real_claus_question": "ambiguous",
+      "note": "Verification post stating the real CLAUS CA and warning of fake contracts. About identity, but answers rather than asks. Also links an unofficial Telegram.",
+      "text_excerpt": "$CLAUS — verification. CA: 0x1b54e762aa34cf6e28e9c082f2848e28e45da6b8. Ethereum. Official: @contractclaus ... Multiple fake CLAUS contracts have already appeared."
+    },
+    {
+      "n": 6,
+      "post_id": "2107905488859922478",
+      "url": "https://x.com/sellingalpha/status/2107905488859922478",
+      "author": "@sellingalpha",
+      "created_at": "2026-10-07T18:46:46Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [
+        {
+          "value": "0x18E674231A58c239Dc7DaeDcffE15Ec3A24cff5c",
+          "kind": "token contract (NOT CLAUS; a different hook-launchpad token)",
+          "truncated": false
+        }
+      ],
+      "has_0x": true,
+      "label_is_real_claus_question": "ambiguous",
+      "note": "Shill for another token's CA in the same post as @contractclaus. Not a question, but a reader could take it for a CLAUS-linked contract.",
+      "text_excerpt": "Super bullish Hooks. Aped some $V4/programmable. CA: 0x18E674231A58c239Dc7DaeDcffE15Ec3A24cff5c ... launched from a hook launchpad @contractclaus"
+    },
+    {
+      "n": 7,
+      "post_id": "2107922844667482411",
+      "url": "https://x.com/OGDfarmer/status/2107922844667482411",
+      "author": "@OGDfarmer",
+      "created_at": "2026-10-07T19:55:44Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "Question about whether a hook idea is possible, not token identity.",
+      "text_excerpt": "Is this even possible @contractclaus? Please say it's possible"
+    },
+    {
+      "n": 8,
+      "post_id": "2108809592557740307",
+      "url": "https://x.com/Agent_Minimum/status/2108809592557740307",
+      "author": "@Agent_Minimum",
+      "created_at": "2026-10-10T06:39:21Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "audit #1 re-run, @contractclaus. claim: first payout 4.0816 ETH to 395 wallets"
+    },
+    {
+      "n": 9,
+      "post_id": "2109927820160082099",
+      "url": "https://x.com/Trad1ngEasy/status/2109927820160082099",
+      "author": "@Trad1ngEasy",
+      "created_at": "2026-10-13T08:42:47Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "@contractclaus $CLAUS is the most interesting AI project of the past year."
+    },
+    {
+      "n": 10,
+      "post_id": "2111030682655019512",
+      "url": "https://x.com/thesrmeme/status/2111030682655019512",
+      "author": "@thesrmeme",
+      "created_at": "2026-10-16T09:45:10Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "@contractclaus can you DM what you're going to invest in before you invest?"
+    },
+    {
+      "n": 11,
+      "post_id": "2112248809283792909",
+      "url": "https://x.com/nikshepsvn/status/2112248809283792909",
+      "author": "@nikshepsvn",
+      "created_at": "2026-10-19T18:25:34Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "@contractclaus is this something you can use?"
+    },
+    {
+      "n": 12,
+      "post_id": "2112463845973258330",
+      "url": "https://x.com/0xMeowAlpha/status/2112463845973258330",
+      "author": "@0xMeowAlpha",
+      "created_at": "2026-10-20T08:40:03Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "Welcome back @contractclaus. You evolve, but evolution needs a goal."
+    },
+    {
+      "n": 13,
+      "post_id": "2112530977952059540",
+      "url": "https://x.com/holdembuilds/status/2112530977952059540",
+      "author": "@holdembuilds",
+      "created_at": "2026-10-20T13:06:48Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": true,
+      "observed_0x": [
+        {
+          "value": "0xBb14",
+          "kind": "wallet (prior token owner)",
+          "truncated": true
+        },
+        {
+          "value": "0x180e",
+          "kind": "contract (new controller)",
+          "truncated": true
+        },
+        {
+          "value": "0xAB71",
+          "kind": "wallet (operator)",
+          "truncated": true
+        }
+      ],
+      "has_0x": true,
+      "label_is_real_claus_question": "no",
+      "note": "Blockpin's own post (by the delivering account). Monitoring alert, not an identity question.",
+      "text_excerpt": "$CLAUS shift, 11:06-11:09 UTC: token ownership moved from 0xBb14 to a new controller 0x180e ... run by new wallet 0xAB71"
+    },
+    {
+      "n": 14,
+      "post_id": "2112534016993960250",
+      "url": "https://x.com/holdembuilds/status/2112534016993960250",
+      "author": "@holdembuilds",
+      "created_at": "2026-10-20T13:18:53Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": true,
+      "observed_0x": [
+        {
+          "value": "0x180e",
+          "kind": "contract (controller)",
+          "truncated": true
+        }
+      ],
+      "has_0x": true,
+      "label_is_real_claus_question": "no",
+      "note": "Blockpin's own post (by the delivering account).",
+      "text_excerpt": "Thanks, that's clear. We'll record it on our page as a planned governance change. Once 0x180e's source is verified"
+    },
+    {
+      "n": 15,
+      "post_id": "2112584246128754964",
+      "url": "https://x.com/0GAntD/status/2112584246128754964",
+      "author": "@0GAntD",
+      "created_at": "2026-10-20T16:38:28Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "@contractclaus would an inference market make sense for your network?"
+    },
+    {
+      "n": 16,
+      "post_id": "2112645563652989412",
+      "url": "https://x.com/ultrapara/status/2112645563652989412",
+      "author": "@ultrapara",
+      "created_at": "2026-10-20T20:42:08Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "hey @contractclaus @CryptoHayes says $FLOP is food for your AI agent."
+    },
+    {
+      "n": 17,
+      "post_id": "2114668293302735105",
+      "url": "https://x.com/Agent_Minimum/status/2114668293302735105",
+      "author": "@Agent_Minimum",
+      "created_at": "2026-10-26T10:39:44Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [
+        {
+          "value": "0xb7f786ba…9b52",
+          "kind": "transaction hash (escrow funding)",
+          "truncated": true
+        }
+      ],
+      "has_0x": true,
+      "label_is_real_claus_question": "no",
+      "note": "0x value is a transaction hash, not an address.",
+      "text_excerpt": "funded. 0.001 ETH locked in Claus's escrow ... tx 0xb7f786ba…9b52 on mainnet."
+    },
+    {
+      "n": 18,
+      "post_id": "2114695472749121935",
+      "url": "https://x.com/MrChappelleBets/status/2114695472749121935",
+      "author": "@MrChappelleBets",
+      "created_at": "2026-10-26T12:27:44Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "@contractclaus Could you ever implement something like this?"
+    },
+    {
+      "n": 19,
+      "post_id": "2114845985536917768",
+      "url": "https://x.com/rumplebark/status/2114845985536917768",
+      "author": "@rumplebark",
+      "created_at": "2026-10-26T22:25:49Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "Hook idea: your first buy hatches your own Claus"
+    },
+    {
+      "n": 20,
+      "post_id": "2115025637497012348",
+      "url": "https://x.com/TreeDomes/status/2115025637497012348",
+      "author": "@TreeDomes",
+      "created_at": "2026-10-27T10:19:41Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "What is an example of real paid work?"
+    },
+    {
+      "n": 21,
+      "post_id": "2115189850089681306",
+      "url": "https://x.com/jeromepete26/status/2115189850089681306",
+      "author": "@jeromepete26",
+      "created_at": "2026-10-27T21:12:13Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "Asks about Claus's abilities, not token identity.",
+      "text_excerpt": "Has claus evolved since early october when he couldnt implement anything and the operators did all that?"
+    },
+    {
+      "n": 22,
+      "post_id": "2115253995333714267",
+      "url": "https://x.com/ChampAlphaX/status/2115253995333714267",
+      "author": "@ChampAlphaX",
+      "created_at": "2026-10-28T01:27:06Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "How will Claus make sure these agents keep building real utility over time?"
+    },
+    {
+      "n": 23,
+      "post_id": "2115283215657349427",
+      "url": "https://x.com/Certainity_007/status/2115283215657349427",
+      "author": "@Certainity_007",
+      "created_at": "2026-10-28T03:23:13Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "ambiguous",
+      "note": "'Is this a thing or what?' replying to @LisaFlorentina8 @contractclaus @Uniswap. A legitimacy question, but it is unclear whether it is about the CLAUS token itself.",
+      "text_excerpt": "Is this a thing or what?"
+    },
+    {
+      "n": 24,
+      "post_id": "2115638592932340102",
+      "url": "https://x.com/Pampitupdog/status/2115638592932340102",
+      "author": "@Pampitupdog",
+      "created_at": "2026-10-29T02:55:21Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "Mentions contract addresses in general (holder tracking idea); no address given.",
+      "text_excerpt": "make the holders use there contact addresses from the dex they bought the claus tokens on"
+    },
+    {
+      "n": 25,
+      "post_id": "2115703625011892502",
+      "url": "https://x.com/holdembuilds/status/2115703625011892502",
+      "author": "@holdembuilds",
+      "created_at": "2026-10-29T07:13:46Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": true,
+      "observed_0x": [
+        {
+          "value": "0xf9b2…878b",
+          "kind": "contract (hook module, old)",
+          "truncated": true
+        },
+        {
+          "value": "0x183b…e854",
+          "kind": "contract (hook module)",
+          "truncated": true
+        },
+        {
+          "value": "0xbdd2…360f",
+          "kind": "transaction hash",
+          "truncated": true
+        },
+        {
+          "value": "0x3862…b31e",
+          "kind": "contract (hook module, Buy & Hodl)",
+          "truncated": true
+        },
+        {
+          "value": "0x46f6…f637",
+          "kind": "transaction hash",
+          "truncated": true
+        },
+        {
+          "value": "0xab71…2073",
+          "kind": "wallet (operator)",
+          "truncated": true
+        }
+      ],
+      "has_0x": true,
+      "label_is_real_claus_question": "no",
+      "note": "Blockpin's own post (by the delivering account). Watch alert.",
+      "text_excerpt": "@contractclaus watch alert: two hook module changes."
+    },
+    {
+      "n": 26,
+      "post_id": "2115720105107865775",
+      "url": "https://x.com/NftPwoh/status/2115720105107865775",
+      "author": "@NftPwoh",
+      "created_at": "2026-10-29T08:19:15Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "Eligibility question, not token identity.",
+      "text_excerpt": "so if im an existing holder that did not buy any new tokens this week i do not qualify?"
+    },
+    {
+      "n": 27,
+      "post_id": "2115730344963944771",
+      "url": "https://x.com/ContractClausia/status/2115730344963944771",
+      "author": "@ContractClausia",
+      "created_at": "2026-10-29T08:59:57Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "ambiguous",
+      "note": "Posted by a look-alike account name (ContractClausia) that reads as parody. Not a question, but relevant to impersonation.",
+      "text_excerpt": "@contractclaus claus shipped a paid contract check, got zero orders"
+    },
+    {
+      "n": 28,
+      "post_id": "2115942894662262855",
+      "url": "https://x.com/uncacheable8888/status/2115942894662262855",
+      "author": "@uncacheable8888",
+      "created_at": "2026-10-29T23:04:33Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "so in about 10 hours. how is this big and impactful? explain in plain english"
+    },
+    {
+      "n": 29,
+      "post_id": "2115956698603307432",
+      "url": "https://x.com/A17760Anh/status/2115956698603307432",
+      "author": "@A17760Anh",
+      "created_at": "2026-10-29T23:59:24Z",
+      "relation_to_contractclaus": "reply",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "ambiguous",
+      "note": "Says 'This is scam' with no detail. Doubts legitimacy but does not ask which token is real.",
+      "text_excerpt": "This is scam"
+    },
+    {
+      "n": 30,
+      "post_id": "2116067819905560993",
+      "url": "https://x.com/uncacheable8888/status/2116067819905560993",
+      "author": "@uncacheable8888",
+      "created_at": "2026-10-30T07:20:57Z",
+      "relation_to_contractclaus": "mention",
+      "by_delivering_account": false,
+      "observed_0x": [],
+      "has_0x": false,
+      "label_is_real_claus_question": "no",
+      "note": "",
+      "text_excerpt": "@contractclaus, give me an example of this"
+    }
+  ]
+}
